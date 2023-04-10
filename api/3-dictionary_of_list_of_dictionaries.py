@@ -36,7 +36,7 @@ if __name__ == '__main__':
                            'task': task,
                            'completed': true_or_false})
             json_list.append(every_dict)
-        
+
         THE_dict[str(user_count)] = json_list
         json_list = []
         task_list = []

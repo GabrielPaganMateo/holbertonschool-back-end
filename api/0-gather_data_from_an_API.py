@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """ Console Module """
 """
-Pythin script that uses this  rest api for given employee ID to return info about his/her todo list progress
+Pythin script that uses this  rest api for given
+employee ID to return info about his/her todo list progress
 """
 if __name__ == '__main__':
     import json
@@ -25,13 +26,12 @@ if __name__ == '__main__':
     for employee in employee_list:
         if employee.get('userId') == int(employee_ID):
             task_count += 1
-            if employee.get('completed') == True:
+            if employee.get('completed') id True:
                 completed_task += 1
                 task_list.append(employee['title'])
-            
 
-
-    print(f'Employee {employee_name} is done with tasks({completed_task}/{task_count}):')
+    print((f'Employee {employee_name}', end=""))
+    print((f'is done with tasks({completed_task}/{task_count}):'))
 
     for task in task_list:
-        print(f'     {task}')
+        print(f'\t {task}')

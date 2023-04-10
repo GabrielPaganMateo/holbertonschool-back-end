@@ -30,8 +30,7 @@ if __name__ == '__main__':
                 completed_task += 1
                 task_list.append(employee['title'])
 
-    print(f'Employee {employee_name}', end="")
-    print((f'is done with tasks({completed_task}/{task_count}):'))
+    print(f'Employee {employee_name} is done with tasks({completed_task}/{task_count}):')
 
     for task in task_list:
         print(f'\t {task}')

@@ -26,12 +26,12 @@ if __name__ == '__main__':
     for employee in employee_list:
         if employee.get('userId') == int(employee_ID):
             task_count += 1
-            if employee.get('completed') id True:
+            if employee.get('completed') is True:
                 completed_task += 1
                 task_list.append(employee['title'])
 
-    print((f'Employee {employee_name}', end=""))
+    print(f'Employee {employee_name}', end="")
     print((f'is done with tasks({completed_task}/{task_count}):'))
 
     for task in task_list:
-        print(f'\t {task}')
+        print(f'     {task}')

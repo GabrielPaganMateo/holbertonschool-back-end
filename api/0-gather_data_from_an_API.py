@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
     firstline = (
         f'Employee {employee_name} is done'
-        f'with tasks({completed_task}/{task_count}):'
+        f' with tasks({completed_task}/{task_count}):'
     )
     print(firstline)
 

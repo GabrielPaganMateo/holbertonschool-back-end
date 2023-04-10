@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-"""Oythin script that uses this 
+"""
+Pythin script that uses this 
 rest api for given employee ID to return
-info about his/her todo list progress"""
+info about his/her todo list progress
+"""
 from sys import argv
 from requests import get
 import json

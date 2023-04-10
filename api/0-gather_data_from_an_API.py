@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """
-Pythin script that uses this 
-rest api for given employee ID to return
-info about his/her todo list progress
+Pythin script that uses this  rest api for given employee ID to return info about his/her todo list progress
 """
 from sys import argv
 from requests import get

@@ -10,21 +10,22 @@ import json
 """this module is fucking documented"""
 
 employee_ID = argv[1]
-employee_info = get(f'https://jsonplaceholder.typicode.com/todos/{employee_ID}')
 all_todos = get(f'https://jsonplaceholder.typicode.com/todos')
+users = get(f'https://jsonplaceholder.typicode.com/users')
 
-employee_dict = json.loads(employee_info.text)
 employee_list = json.loads(all_todos.text)
+users = json.loads(users.text)
+for user in users:
+    if user.get('id') == int(employee_ID):
+        employee_name = user.get('name')
 
-
-employee_name = employee_dict['userId']
 completed_task = 0
 task_count = 0
 task_list = []
 for employee in employee_list:
-    if employee['userId'] == employee_dict['userId']:
+    if employee.get('userId') == int(employee_ID):
         task_count += 1
-        if employee['completed'] == True:
+        if employee.get('completed') == True:
             completed_task += 1
             task_list.append(employee['title'])
         

@@ -33,22 +33,15 @@ if __name__ == '__main__':
     csv_list = []
     employee_id = str(employee_ID)
     for i in range(len(task_list)):
-        line = eval(f"['{employee_id}', '{employee_name}', '{task_success[i]}', '{task_list[i]}']")
+        string = (
+            f"['{employee_id}', '{employee_name}',"
+            f" '{task_success[i]}', '{task_list[i]}']"
+        )
+        line = eval(string)
         csv_list.append(line)
-    
+
     with open(f'{employee_ID}.csv', mode='w') as f:
         f = csv.writer(f, quoting=1)
-    
+
         for list in csv_list:
             f.writerow(list)
-
-
-"""
-    firstline = (
-        f'Employee {employee_name} is done'
-        f' with tasks({completed_task}/{task_count}):'
-    )
-    print(firstline)
-
-    for task in task_list:
-        print(f'\t {task}')"""

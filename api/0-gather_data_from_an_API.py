@@ -34,4 +34,4 @@ if __name__ == '__main__':
     print((f'is done with tasks({completed_task}/{task_count}):'))
 
     for task in task_list:
-        print(f'     {task}')
+        print(f'\t {task}')
